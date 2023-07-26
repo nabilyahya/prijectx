@@ -61,13 +61,13 @@ const HeaderComponent = () => {
                 transformOrigin={{ horizontal: "right", vertical: "top" }}
                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
               >
-                <MenuItem>Option 1</MenuItem>
+                <MenuItem>منتجات</MenuItem>
                 <MenuItem>Option 2</MenuItem>
               </Menu>
             </>
           ) : (
             <>
-              <Button color="inherit">Option 1</Button>
+              <Button color="inherit">منتجات</Button>
               <Button color="inherit">Option 2</Button>
             </>
           )}

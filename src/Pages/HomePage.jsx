@@ -98,7 +98,6 @@ export const HomePage = () => {
   ];
   return (
     <Box sx={{ display: "flex", flexDirection: "column", minHeight: "200vh" }}>
-      <HeaderComponent />
       <HomePageHeroWithCard />
       <Grid container spacing={2}>
         {data.slice(0, visibleCards).map(
@@ -130,7 +129,6 @@ export const HomePage = () => {
       <Box display="flex" justifyContent="center" mt={2} mb={2}>
         <DynamicLinkButton buttonText="مشاهدة المزيد" buttonLink="/news" />
       </Box>
-      <FooterComponent />
     </Box>
   );
 };
