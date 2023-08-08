@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
-import HeaderComponent from "Components/HeaderComponent";
-import FooterComponent from "Components/FooterComponent";
 import HomePageHeroWithCard from "Components/HomePageHeroWithCard";
 import InfoCard from "Components/InfoCard";
 import SideImageSection from "Components/SideImageSection ";

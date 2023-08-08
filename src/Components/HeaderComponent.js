@@ -9,12 +9,11 @@ import {
   Menu,
   MenuItem,
   useMediaQuery,
-  Box,
   createTheme,
   ThemeProvider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
+import { Link } from "react-router-dom";
 const theme = createTheme();
 
 const HeaderComponent = () => {
@@ -61,23 +60,62 @@ const HeaderComponent = () => {
                 transformOrigin={{ horizontal: "right", vertical: "top" }}
                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
               >
-                <MenuItem>منتجات</MenuItem>
-                <MenuItem>Option 2</MenuItem>
+                <Link
+                  to="/ProductsList-List"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <MenuItem>منتجات</MenuItem>
+                </Link>
+                <Link
+                  to="/Kuafor-List"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <MenuItem>جميع الصالونات</MenuItem>
+                </Link>
+                <Link
+                  to="/MedicalDescribe-List"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <MenuItem>وصفات </MenuItem>
+                </Link>
               </Menu>
             </>
           ) : (
             <>
-              <Button color="inherit">منتجات</Button>
-              <Button color="inherit">Option 2</Button>
+              <Link
+                to="/ProductsList-List"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <Button color="inherit">منتجات</Button>
+              </Link>
+              <Link
+                to="/Kuafor-List"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <Button color="inherit">جميع الصالونات</Button>
+              </Link>
+              <Link
+                to="/MedicalDescribe-List"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <Button color="inherit"> وصفات</Button>
+              </Link>
             </>
           )}
           <Typography variant="h6" style={{ flexGrow: 1 }}>
-            Site Logo
+            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+              Site Logo
+            </Link>
           </Typography>
           <IconButton color="inherit">
             <Avatar />
           </IconButton>
-          <Button color="inherit">Login</Button>
+          <Link
+            to="/login"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Button color="inherit">Login</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </ThemeProvider>
