@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-
+import { Link } from "react-router-dom";
 const InfoCard = ({ name, address, phoneNumber, rating, imageUrl }) => {
   return (
     <Card sx={{ maxWidth: 345, m: 3 }}>
@@ -45,9 +45,11 @@ const InfoCard = ({ name, address, phoneNumber, rating, imageUrl }) => {
           </Typography>
         </Box>
         <Box mt={2}>
-          <Button variant="contained" fullWidth>
-            الزر
-          </Button>
+          <Link to="/K-Details">
+            <Button variant="contained" fullWidth>
+              الزر
+            </Button>
+          </Link>
         </Box>
       </CardContent>
     </Card>

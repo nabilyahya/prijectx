@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Box, Button, Grid } from "@mui/material";
-import HeaderComponent from "Components/HeaderComponent";
-import FooterComponent from "Components/FooterComponent";
 import HomePageHeroWithCard from "Components/HomePageHeroWithCard";
 import InfoCard from "Components/InfoCard";
 import SideImageSection from "Components/SideImageSection ";
@@ -98,7 +96,6 @@ export const HomePage = () => {
   ];
   return (
     <Box sx={{ display: "flex", flexDirection: "column", minHeight: "200vh" }}>
-      <HeaderComponent />
       <HomePageHeroWithCard />
       <Grid container spacing={2}>
         {data.slice(0, visibleCards).map(
@@ -130,7 +127,6 @@ export const HomePage = () => {
       <Box display="flex" justifyContent="center" mt={2} mb={2}>
         <DynamicLinkButton buttonText="مشاهدة المزيد" buttonLink="/news" />
       </Box>
-      <FooterComponent />
     </Box>
   );
 };
